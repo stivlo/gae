@@ -11,7 +11,7 @@
 
 	<properties>
 		<appengine.app.version>1</appengine.app.version>
-		<appengine.target.version>1.7.7</appengine.target.version>
+		<appengine.target.version>1.8.3</appengine.target.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>3.2.3.RELEASE</spring.version>
 	</properties>
@@ -61,6 +61,19 @@
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.13</version>
+		</dependency>
+		
+       <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-core</artifactId>
+            <version>[3.0, 3.0.99]</version>
+            <scope>runtime</scope>
+        </dependency>
+
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-api-jpa</artifactId>
+			<version>[3.0, 3.0.99]</version>
 		</dependency>
 
 		<dependency>
