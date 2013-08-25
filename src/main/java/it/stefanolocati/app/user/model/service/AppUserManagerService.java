@@ -19,7 +19,7 @@ public class AppUserManagerService implements AppUserManager {
 	}
 
 	@Override
-	public Integer save(AppUser appUser) {
+	public Long save(AppUser appUser) {
 		appUserDao.save(appUser);
 		appUserDao.flush();
 		return appUser.getId();

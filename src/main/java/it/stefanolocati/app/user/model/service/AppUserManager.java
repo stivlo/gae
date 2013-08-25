@@ -6,7 +6,7 @@ public interface AppUserManager {
 
 	AppUser findByIdOrThrowException(int appUserId);
 
-	Integer save(AppUser appUser);
+	Long save(AppUser appUser);
 
 	void delete(int appUserId);
 

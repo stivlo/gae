@@ -7,7 +7,7 @@ import javax.persistence.Id;
 public class AppUser {
 	
 	@Id
-	private Integer id;
+	private Long id;
 	
 	private String firstName, lastName;
 
@@ -27,7 +27,7 @@ public class AppUser {
 		this.lastName = lastName;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 

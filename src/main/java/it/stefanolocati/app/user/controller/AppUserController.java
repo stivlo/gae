@@ -26,7 +26,7 @@ public class AppUserController {
 	
 	@RequestMapping(value = "/app-user", method = RequestMethod.POST)
 	@ResponseBody
-	public Integer save(@RequestBody AppUser appUser) {
+	public Long save(@RequestBody AppUser appUser) {
 		return appUserManager.save(appUser);
 	}
 	
