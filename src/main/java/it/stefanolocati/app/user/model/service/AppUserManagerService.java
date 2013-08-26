@@ -6,6 +6,7 @@ import it.stefanolocati.app.user.model.entity.AppUser;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class AppUserManagerService implements AppUserManager {
@@ -19,6 +20,7 @@ public class AppUserManagerService implements AppUserManager {
 	}
 
 	@Override
+	@Transactional
 	public Long save(AppUser appUser) {
 		appUserDao.save(appUser);
 		appUserDao.flush();
@@ -26,6 +28,7 @@ public class AppUserManagerService implements AppUserManager {
 	}
 
 	@Override
+	@Transactional
 	public void delete(int appUserId) {
 		AppUser appUser = appUserDao.findByIdOrThrowException(appUserId);
 		appUserDao.delete(appUser);
